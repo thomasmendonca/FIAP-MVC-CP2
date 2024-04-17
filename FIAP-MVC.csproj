@@ -16,4 +16,15 @@
       <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.21.121" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Migrations\20240411231817_second.cs" />
+      <Compile Remove="Migrations\20240411231817_second.Designer.cs" />
+      <Compile Remove="Models\Aval.cs" />
+      <Compile Remove="Models\Avaliacao.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\Home\UserLogin.cshtml" />
+    </ItemGroup>
+
 </Project>

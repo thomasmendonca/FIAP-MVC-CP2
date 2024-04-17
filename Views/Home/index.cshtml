@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+<h1>@ViewData["Title"]</h1>
+
+@* Adicione um link para a página de Login *@
+<a asp-controller="User" asp-action="Login" class="btn btn-primary">Login</a>
+
+<br /><br />
+
+@* Adicione um link para a página de Cadastro *@
+<a asp-controller="User" asp-action="Register" class="btn btn-success">Cadastro</a>

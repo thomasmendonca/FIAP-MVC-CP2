@@ -21,33 +21,6 @@ namespace FIAP_MVC.Migrations
 
             OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FIAP_MVC.Models.Avaliacao", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
-
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Comentario")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("TituloDaAvaliacao")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<int>("UserAvaliacao")
-                        .HasColumnType("NUMBER(10)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("NUMBER(10)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PZ_Avaliacoes");
-                });
-
             modelBuilder.Entity("FIAP_MVC.Models.User", b =>
                 {
                     b.Property<int>("id")
@@ -60,15 +33,7 @@ namespace FIAP_MVC.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
                     b.Property<string>("UserPassword")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("UserPhone")
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
