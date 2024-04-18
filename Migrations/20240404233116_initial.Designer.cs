@@ -26,11 +26,11 @@ namespace FIAP_MVC.Migrations
 
             modelBuilder.Entity("FIAP_MVC.Models.User", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("UserEmail")
                         .IsRequired()
@@ -48,7 +48,7 @@ namespace FIAP_MVC.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("PZ_Users");
                 });

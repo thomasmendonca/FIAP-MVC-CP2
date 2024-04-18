@@ -22,25 +22,34 @@ namespace FIAP_MVC.Migrations
             OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("FIAP_MVC.Models.User", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("UserEmail")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                b.Property<string>("UserEmail")
+                    .IsRequired()
+                    .HasColumnType("NVARCHAR2(2000)");
 
-                    b.Property<string>("UserPassword")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                b.Property<string>("UserName")
+                    .IsRequired()
+                    .HasColumnType("NVARCHAR2(2000)");
 
-                    b.HasKey("id");
+                b.Property<string>("UserPassword")
+                    .IsRequired()
+                    .HasColumnType("NVARCHAR2(2000)");
 
-                    b.ToTable("PZ_Users");
-                });
+                b.Property<string>("UserPhone")
+                    .IsRequired()
+                    .HasColumnType("NVARCHAR2(2000)");
+
+                b.HasKey("Id");
+
+                b.ToTable("PZ_Users");
+            });
+
 #pragma warning restore 612, 618
         }
     }

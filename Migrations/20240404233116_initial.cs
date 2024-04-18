@@ -11,17 +11,19 @@ namespace FIAP_MVC.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "PZ_Users",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "NUMBER(10)", nullable: false)
+                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                    UserName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     UserEmail = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    UserPassword = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    UserPassword = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    UserPhone = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.id);
+                    table.PrimaryKey("PK_PZ_Users", x => x.Id);
                 });
         }
 
@@ -29,7 +31,7 @@ namespace FIAP_MVC.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "PZ_Users");
         }
     }
 }

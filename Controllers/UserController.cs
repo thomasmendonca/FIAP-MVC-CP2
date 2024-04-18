@@ -8,43 +8,50 @@ namespace FIAP_MVC.Controllers
     public class UserController : Controller
     {
         private readonly DataContext _dataContext;
+        private readonly ILogger<UserController> _logger;
 
-        public UserController(DataContext dataContext)
+        public UserController(ILogger<UserController> logger, DataContext dataContext)
         {
             _dataContext = dataContext;
+            _logger = logger;
         }
+        
+        public IActionResult Index()
+        {
+            return View();
+        }
+
 
         public IActionResult Register(RegisterDTO request)
         {
-            var user = _dataContext.Users.FirstOrDefault(x => x.UserEmail==request.UserEmail);
+            var user = _dataContext.PZ_Users.FirstOrDefault(x => x.UserEmail == request.UserEmail);
             if (user != null)
             {
-                return BadRequest("Usuário já existe");
+                return BadRequest("Usuário ja existe");
             }
-
-            User NewUser = new User
-            {
-                UserEmail = request.UserEmail,
-                UserPassword = request.UserPassword
+            User newUser = new User { 
+                UserEmail = request.UserEmail ,
+                UserName = request.UserName ,
+                UserPassword = request.UserPassword,
+                UserPhone = request.UserPhone ,
             };
-            _dataContext.Add(NewUser);
+            _dataContext.Add(newUser);
             _dataContext.SaveChanges();
             return View();
         }
+
         
-        public IActionResult Login(LoginDTO request)
+        public IActionResult Login(LoginDTO request) 
         {
-            var find = _dataContext.Users.FirstOrDefault(x => x.UserEmail == request.UserEmail);
-            if (find == null)
+            var find = _dataContext.PZ_Users.FirstOrDefault(x => x.UserEmail == request.UserEmail);
+            if (find == null) 
             {
                 return NotFound();
             }
-
-            if (find.UserPassword != request.UserPassword)
+            if(find.UserPassword != request.UserPassword)
             {
                 return BadRequest("Senha inválida");
             }
-
             ViewBag.userData = find;
             return View(find);
         }

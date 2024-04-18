@@ -34,20 +34,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/User/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9pbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9SZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/User/UserLogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Vc2VyTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/User/UserRegister.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Vc2VyUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/kaue/Área de Trabalho/FIAP/2º ANO/ADVANCED BUSINESS DEVELOPMENT WITH .NET/FIAP-MVC/Views/_ViewImports.cshtml]
