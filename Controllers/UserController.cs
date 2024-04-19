@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using FIAP_MVC.Data;
 using FIAP_MVC.DTOs;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,7 @@ namespace FIAP_MVC.Controllers
             return View();
         }
 
+
         
         public IActionResult Login(LoginDTO request) 
         {
@@ -56,6 +58,12 @@ namespace FIAP_MVC.Controllers
             return View(find);
         }
 
+        
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
         
     }
 }
